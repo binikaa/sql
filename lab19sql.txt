@@ -1,0 +1,25 @@
+1.select * from customers;
+2.select Country from customers where country='USA'or country='Mexico' or country='Canada';
+3.select * from customers where CustomerID Like 'BL%';
+4.select * from orders limit 100;
+
+5.select * from customers where postalcode='12209'or 
+postalcode='1010' or postalcode='3012' or postalcode='05023';
+6.select * from orders where shipregion !='null';
+7.select * from customers order by country,city;
+
+8.Insert into customers (customerId,companyname,contactname,contacttitle,address,city,
+region,postalcode,country,phone,fax,Image,ImageThumbnail) 
+values('ABC','abcltd','abc',
+'sales','3543kkjvfdv','detroit','null',1011,'usa',(1) 135-5333,(1) 135-5535,'null');
+9.Update orders  set shipRegion='EuroZone' where shipCountry='France';
+10.delete from `order details` where quantity=1;
+11.select max(Quantity) as 'max',min(Quantity) as 'min', avg(Quantity) as 'average' from `order details`;
+12.select max(Quantity) as 'max',min(Quantity) as 'min', avg(Quantity) as 'average' from `order details` order by orderid;
+13.select customerID from orders where orderID=10290;
+
+14.select * from orders inner join customers;
+select * from orders left  join customers on orders.customerId= customers.CustomerID;
+select * from orders right  join customers on orders.customerId= customers.CustomerID;
+15.select firstname from employees where ReportsTo='null';
+16.select firstname from employees where ReportsTo='Andrew';
